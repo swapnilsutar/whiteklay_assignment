@@ -1,0 +1,13 @@
+.bar{
+    padding:10px;
+    float: right;
+    margin-right: 80px;
+}
+.bar input{
+    padding: 6px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}

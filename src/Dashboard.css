@@ -1,0 +1,19 @@
+.dash_icon{
+
+    display: flex;
+}
+.card-text-head{
+    font-size: 27px;
+    font-weight: 700;
+}
+.dashboard{
+    padding:20px
+}
+.card{
+    width: 18rem;
+    margin: 10px;
+}
+.board{
+    display: flex;
+    padding:20px;
+}

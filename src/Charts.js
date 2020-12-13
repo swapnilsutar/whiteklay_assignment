@@ -33,16 +33,16 @@ function Charts() {
     // A react-chart hyper-responsively and continuously fills the available
     // space of its parent element automatically
     return(
-
-        <div
-        style={{
-            width: '700px',
-            height: '300px'
-        }}
-        >
-            <h4> Projects in 2019 & 2020 </h4>
-        <Chart data={data} axes={axes} getLabel={getLabel} />
-    </div>
+      <>
+      <h4> Projects in 2019 & 2020 </h4>
+        <div className="row">
+            <div className="col-lg-7">
+              <div style={{height: '300px'}}>
+                <Chart data={data} axes={axes} getLabel={getLabel} />
+              </div>
+          </div>
+        </div>
+    </>
     );
   
 }

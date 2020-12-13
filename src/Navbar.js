@@ -13,7 +13,10 @@ function Navbar(){
     return(
         <>
             <div className="sidebar">
-            <h3 className="brand"> Whiteklay </h3>
+            <h3 className="brand"> 
+                <img src={process.env.PUBLIC_URL + '/white.png'}  alt="logo" height="40px"/>
+                Whiteklay
+             </h3>
 
          
             <NavLink exact activeClassName="active" to="/Home" >

@@ -7,7 +7,7 @@ import Orgdata from "./Orgdata";
 function Organization(){
 
     const [ Name , setName ] = useState();
-    const [ Size , setSize ] = useState();
+    const [ Size , setSize ] = useState(1);
 
     const [ mynewlist , setmynewlist ] = useState([]);
 
@@ -26,12 +26,19 @@ function Organization(){
     const store = (e) =>{
         e.preventDefault();
         setmynewlist((allitem)=>{
-            return [...allitem,[Name+" ",Size+'(size)']];
+            return [...allitem,[Name+" ",'('+Size+' members)']];
     });
     setName("");
     setSize("");
     }
 
+    const del = (id1) =>{
+        setmynewlist((allitem)=>{
+            return allitem.filter((vala,index)=>{
+                return index !== id1;
+            })
+        })
+    }
 
     return(
         <>
@@ -62,7 +69,7 @@ function Organization(){
                 </div>
             </div>
 
-            <div className="col-lg-4 my_list">
+            <div className="col-lg-6 my_list">
             <br/>
                             <br/>
                 <ol>
@@ -71,7 +78,8 @@ function Organization(){
                         mynewlist.map((val,index )=>{
                             return <Orgdata
                             text= {val}
-                            id = {index}/>;
+                            id = {index}
+                            selectme= {del}/>;
                         })
                     }
                 </ol>

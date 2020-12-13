@@ -24,7 +24,7 @@ function Navbar(){
                 <span className="ico_text">Home</span>
             </NavLink>
 
-            <NavLink exact activeClassName="active" to="/" >
+            <NavLink exact activeClassName="active" to="/D" >
                 <DashboardIcon/>
                 <span className="ico_text">Dashboard</span>
             </NavLink>
